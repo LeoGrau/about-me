@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title> About me | Leonardo Manuel Grau Vargas </title>
 </head>
 
@@ -22,16 +23,58 @@
             Leonardo Manuel Grau Vargas
         </h1>
     </header>
-
     <main>
-        <article>
+        <article id="about-me">
             <section>
                 <h3>About me</h3>
-                <p>I'm a software engineer graduated from UPC</p>
+                <p>
+                    I'm a 6th cycle student of the Software Engineering career at the
+                    <a href="https://upc.edu.pe/">UPC</a> (Peruvian University of Applied
+                    Sciences).
+                </p>
+            </section>
+        </article>
+        <article>
+            <section>
+                <h3>Experience</h3>
+                <h4>Tecnologies</h4>
+                <ul>
+                    <li><h5> Programming Languages </h5></li>
+                    <li>
+                        <h5> Front-end </h5>
+                        <ul>
+                            <li>
+                                <div class="tecnologie-chart"> 
+                                    <img class ="tech-img" src="./assets/img/vue_logo.png" alt="">
+                                    <span>Vue</span>
+                                    <div class="xp-progress">
+                                        <div class="xp-bar">40%</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tecnologie-chart"> 
+                                    <img class ="tech-img" src="./assets/img/react_logo.png" alt="">
+                                    <span>React</span>
+                                    <div class="xp-progress">
+                                        <div class="xp-bar"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><h5> Back-end </h5></li>
+                </ul>
+                <h4>Laboral</h4>
+                <p>
+                    I do not have any laboral experience, but I have completed and deployed sucessfully 1 project with
+                    Vue.js and I have certain experience with this Framework.
+                </p>
+
             </section>
         </article>
     </main>
-
+    <script src="scripts/bar.js"></script>
 </body>
 
 </html>

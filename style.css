@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+.tech-img {
+  width: 50px;
+}
+
+
+.xp-progress, .xp-bar {
+    border-radius: 20px;
+}
+
+.xp-progress {
+  width: 400px;
+  height: 30px;
+  background-color: grey;
+}
+
+.xp-bar {
+  width: 40%;
+  height: 100%;
+  background-color: green;
+  text-align: end;
+  padding-right: 10px;
+  padding-top: 3px;
+}
