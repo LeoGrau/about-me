@@ -1,30 +1,44 @@
-const elements = document.getElementsByClassName("xp-bar");
+const bars = document.getElementsByClassName("xp-bar");
 
-var percentages = {
-    "vue": 0.45,
-    "react": 0.1,
+
+var techSkills = [
+  { name: 'cpp', xpPercent: 0.80 },
+  { name: 'javascript', xpPercent: 0.50 },
+  { name: 'python', xpPercent: 0.60 },
+  { name: 'vue', xpPercent: 0.30 },
+  { name: 'react', xpPercent: 0.30 }
+]
+
+var numberOfTechSkills = 1;
+
+for (let i = 0; i < numberOfTechSkills; i++) {
+  bars[i].style.width = techSkills[i].xpPercent * 100 + "%";
+  bars[i].innerHTML = techSkills[i].xpPercent * 100 + "%";
 }
 
-elements[0].style.width = String(percentages["vue"]*100) + "%";
-elements[0].innerHTML = String(percentages["vue"]*100) + "%";
+var id = setInterval(charge, 10);
 
-var i = 0;
-function move() {
-  if (i == 0) {
-    i = 1;
-    var width = 0;
-    var id = setInterval(frame, 10);
-    function frame() {
-      if (width >= percentages["vue"]*100) {
-        clearInterval(id);
-        i = 0;
-      } else {
-        width++;
-        elements[0].style.width = width + "%";
-        elements[0].innerHTML = width  + "%";
+var loads = [0, 0, 0, 0, 0];
+function charge() {
+  for (let i = 0; i < numberOfTechSkills; i++) {
+    if (loads[i] < techSkills[i].xpPercent * 100) {
+      loads[i]++;
+      bars[i].style.width = (loads[i]) + "%";
+      bars[i].innerHTML = (loads[i]) + "%";
+    }
+  }
+  if(notFinished()) {
+    clearInterval(id);
+  }
+  function notFinished() {
+    for(let i = 0; i < numberOfTechSkills; i++) {
+      if(loads[i] != techSkills[i].xpPercent * 100) {
+        return false;
       }
     }
+    return true;
   }
 }
 
-move()
+
+

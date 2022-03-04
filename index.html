@@ -10,71 +10,87 @@
 </head>
 
 <body>
-    <nav>
+    <nav id="navbar">
         <ul>
-            <li>About</li>
-            <li>Experience</li>
-            <li>Portfolio</li>
+            <li> <a href="">About</a></li>
+            <li> <a href="">Experience</a></li>
+            <li> <a href="">Portfolio</a></li>
         </ul>
     </nav>
-
+    <script src="scripts/nav.js"></script>
     <header>
-        <h1>
-            Leonardo Manuel Grau Vargas
-        </h1>
+        <div class="container">
+            <h5 class="tech-sm-font c-turquoise">
+                Hello, my name is
+            </h5>
+            <h1 class="h-title-1"> Leonardo Grau </h1>
+            <h2 class="tech-sm-font c-babyblue"> - "In front of my screen" </h2>
+            <p class="h-text">
+                I'm a fullstack developer from Peru. I enjoy creating web applications with Vue.js.
+                <br>
+                Nowadays, I'm learning React.js. My next step will be React Native.
+            </p>
+        </div>
     </header>
     <main>
         <article id="about-me">
             <section>
-                <h3>About me</h3>
-                <p>
-                    I'm a 6th cycle student of the Software Engineering career at the
-                    <a href="https://upc.edu.pe/">UPC</a> (Peruvian University of Applied
-                    Sciences).
-                </p>
+                <div class="title-container">
+                    <h3 class="m-title">About Me</h3>
+                    <div class="line"></div>
+                </div>
+                <div class="info-container">
+                    <div class="text-container">
+                        <p class="m-text">
+                            I'm a 6th cycle student of the Software Engineering career at the
+                            <a href="https://upc.edu.pe/">UPC</a> (Peruvian University of Applied
+                            Sciences). I love create things that works on Internet. Also,
+                        </p>
+                    </div>
+                    <div class="profile-container">
+                        <img class="profile-photo" src="./assets/img/Yo.jpeg" alt="Me" onmouseover="compress()" onmouseleave="normal()">
+                        <div class="square"></div>
+                    </div>
+                    <script>
+                        squares = document.getElementsByClassName("square");
+                        function compress() {
+                            squares[0].style.left = "10px";
+                            squares[0].style.top = "10px";
+                            squares[0].style.transition = "all 0.3s ease";
+                        }
+                        function normal() {
+                            squares[0].style.left = "20px";
+                            squares[0].style.top = "20px";
+                            squares[0].style.transition = "all 0.3s ease";
+                        }
+                    </script>
+                </div>
             </section>
         </article>
-        <article>
+        <article id="experience">
             <section>
-                <h3>Experience</h3>
-                <h4>Tecnologies</h4>
-                <ul>
-                    <li><h5> Programming Languages </h5></li>
-                    <li>
-                        <h5> Front-end </h5>
-                        <ul>
-                            <li>
-                                <div class="tecnologie-chart"> 
-                                    <img class ="tech-img" src="./assets/img/vue_logo.png" alt="">
-                                    <span>Vue</span>
-                                    <div class="xp-progress">
-                                        <div class="xp-bar">40%</div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="tecnologie-chart"> 
-                                    <img class ="tech-img" src="./assets/img/react_logo.png" alt="">
-                                    <span>React</span>
+                <h3 class="m-title center-text">Skills</h3>
+                <div id="tech-skills">
+                    <h3 class="m-subtitle">Programming Languages</h3>
+                    <ul>
+                        <li>
+                            <div class="tech-container">
+                                <img class="tech-img" src="./assets/img/c++_logo.png" alt="">
+                                <div class="progress">
+                                    <p class="tech-sm-font">C++</p>
                                     <div class="xp-progress">
                                         <div class="xp-bar"></div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><h5> Back-end </h5></li>
-                </ul>
-                <h4>Laboral</h4>
-                <p>
-                    I do not have any laboral experience, but I have completed and deployed sucessfully 1 project with
-                    Vue.js and I have certain experience with this Framework.
-                </p>
-
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </article>
     </main>
     <script src="scripts/bar.js"></script>
+
 </body>
 
 </html>
