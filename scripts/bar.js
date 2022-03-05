@@ -9,7 +9,7 @@ var techSkills = [
   { name: 'react', xpPercent: 0.30 }
 ]
 
-var numberOfTechSkills = 1;
+var numberOfTechSkills = 3;
 
 for (let i = 0; i < numberOfTechSkills; i++) {
   bars[i].style.width = techSkills[i].xpPercent * 100 + "%";

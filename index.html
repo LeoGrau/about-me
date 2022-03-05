@@ -51,19 +51,7 @@
                         <img class="profile-photo" src="./assets/img/Yo.jpeg" alt="Me" onmouseover="compress()" onmouseleave="normal()">
                         <div class="square"></div>
                     </div>
-                    <script>
-                        squares = document.getElementsByClassName("square");
-                        function compress() {
-                            squares[0].style.left = "10px";
-                            squares[0].style.top = "10px";
-                            squares[0].style.transition = "all 0.3s ease";
-                        }
-                        function normal() {
-                            squares[0].style.left = "20px";
-                            squares[0].style.top = "20px";
-                            squares[0].style.transition = "all 0.3s ease";
-                        }
-                    </script>
+                    <script src = "scripts/square.js" ></script>
                 </div>
             </section>
         </article>
@@ -78,6 +66,28 @@
                                 <img class="tech-img" src="./assets/img/c++_logo.png" alt="">
                                 <div class="progress">
                                     <p class="tech-sm-font">C++</p>
+                                    <div class="xp-progress">
+                                        <div class="xp-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tech-container">
+                                <img class="tech-img" src="./assets/img/javascript_logo.png" alt="">
+                                <div class="progress">
+                                    <p class="tech-sm-font">Javascript</p>
+                                    <div class="xp-progress">
+                                        <div class="xp-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tech-container">
+                                <img class="tech-img" src="./assets/img/python_logo.png" alt="">
+                                <div class="progress">
+                                    <p class="tech-sm-font">Python</p>
                                     <div class="xp-progress">
                                         <div class="xp-bar"></div>
                                     </div>
